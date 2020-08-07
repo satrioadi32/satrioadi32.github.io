@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daftar Akun</title>
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+  integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+  <center>
+  <div class="box">Register Form
+    <hr>
+  <form class="" action="index.html" method="post">
+	<div class="container">
+      <i class="fa fa-envelope"></i>
+      <input class="input" type="text" placeholder="Email">
+  </div>
+
+  <div class="container">
+      <i class="fa fa-key"></i>
+      <input class="input" type="password" placeholder="Password">
+  </div>
+
+  <div class="container">
+      <i class="fa fa-envelope"></i>
+      <input class="input" type="text" placeholder="No HP">
+  </div>
+
+  <button type="submit" class="btn">Register</button>
+  </form>
+  </center>
+</body>
+	<script type="text/javascript">
+		function register() {
+			var akun = document.getElementById("Masukkan Akun Anda").value;
+			var password = document.getElementById("Password").value;
+			var nohp = document.getElementById("No HP").value;
+
+			if (akun !=" " && password !=" " nohp !=" ") {
+				return true;
+			}
+
+			else {
+				alert('Anda harus melengkapi form pendaftaran !');
+			}
+		}
+	</script>
+</html>

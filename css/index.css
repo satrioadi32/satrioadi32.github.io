@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Courier, monospace;
+}
+
+header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../img/pasta.jpg');
+  width:100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+ul li{
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 20px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+ul li a:hover{
+  border:2px solid #fff;
+  background-color: #fff;
+  color: black;
+}
+
+ul li.active a{
+  border:2px solid #fff;
+  background-color: #fff;
+  color: black;
+}
+
+.sidebar{
+  width: 50px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menu{
+  display: block;
+  width: 25px;
+  margin: 40px auto 0;
+  cursor: pointer;
+}
+
+.socialmed img, .link img{
+  width: 35px;
+  height: 5px auto;
+  cursor: pointer;
+}
+
+.socialmed {
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link{
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+}
+.logo img{
+  float:left;
+  width: 300px;
+  height: auto;
+}
+
+.main{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.anim img{
+  width: 50px;
+  animation: bubble 6s linear infinite;
+}
+
+.anim{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: -30px;
+  position: relative;
+}
+
+@keyframes bubble {
+  0%{
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(80vh);
+    opacity: 0;
+  }
+}
+
+.anim img:nth-child(1){
+  animation-delay: 1s;
+}
+.anim img:nth-child(2){
+  animation-delay: 3.5s;
+}
+.anim img:nth-child(3){
+  animation-delay: 4s;
+}
+.anim img:nth-child(4){
+  animation-delay: 3s;
+}
+.anim img:nth-child(5){
+  animation-delay: 5s;
+}
+.anim img:nth-child(6){
+  animation-delay: 2.5s;
+}
