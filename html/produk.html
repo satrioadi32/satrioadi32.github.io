@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Selamat Datang</title>
+    <link rel="stylesheet" href="../css/produk.css">
+    <link rel="icon" href="../img/rp.png">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+      $(window).on("scroll", function(){
+        if ($(window).scrollTop()){
+          $('nav').addClass('black');
+        }
+        else {
+            $('nav').removeClass('black');
+        }
+
+      })
+    </script>
+    <script type="text/javascript">
+      $(document).on('click', 'ul li', function(){
+          $(this).addClass('active').siblings().removeClass('active')
+      })
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="../img/rapayu.png">
+      </div>
+      <ul>
+        <li class="active"><a href="#">Beranda</a></li>
+        <li><a href="#">Produk</a></li>
+        <li><a href="#">Histori</a></li>
+        <li><a href="#">Tentang</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

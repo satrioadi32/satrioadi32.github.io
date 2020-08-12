@@ -1,141 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 *{
   margin: 0;
   padding: 0;
-  font-family: Courier, monospace;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-header{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../img/pasta.jpg');
-  width:100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+body {
+  background: #111;
 }
 
-ul{
-  float: right;
-  list-style-type: none;
-  margin-top: 20px;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
 }
 
-ul li{
-  display: inline-block;
-}
-
-ul li a {
-  text-decoration: none;
+header .logo {
+  position: relative;
+  font-size: 2em;
   color: #fff;
-  padding: 8px 20px;
-  border: 2px solid gold;
-  border-radius: 10px;
-  transition: 0.4s ease;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+
 }
 
-ul li a:hover{
-  border:2px solid #fff;
-  background-color: #fff;
-  color: black;
+header .toggle {
+  max-width: 30px;
+  cursor: pointer;
 }
 
-ul li.active a{
-  border:2px solid #fff;
-  background-color: #fff;
-  color: black;
+header .toggle img {
+  max-width: 100%;
 }
 
-.sidebar{
-  width: 50px;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner::before {
+  content: '';
   position: absolute;
   right: 0;
   top: 0;
+  width: 400px;
+  height: 100%;
+  background: #DC143C;
 }
 
-.menu{
-  display: block;
-  width: 25px;
-  margin: 40px auto 0;
-  cursor: pointer;
-}
-
-.socialmed img, .link img{
-  width: 35px;
-  height: 5px auto;
-  cursor: pointer;
-}
-
-.socialmed {
-  width: 50px;
-  text-align: center;
+.banner video {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.link{
-  width: 50px;
-  text-align: center;
-  position: absolute;
-  bottom: 30px;
-}
-.logo img{
-  float:left;
-  width: 300px;
-  height: auto;
-}
-
-.main{
-  max-width: 1200px;
-  margin: auto;
-}
-
-.anim img{
-  width: 50px;
-  animation: bubble 6s linear infinite;
-}
-
-.anim{
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  top: -30px;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.banner .kotak-kata {
   position: relative;
+  max-width: 550px;
+  z-index: 2;
 }
 
-@keyframes bubble {
-  0%{
-    transform: translateY(-10vh);
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  70%{
-    opacity: 1;
-  }
-  100%{
-    transform: translateY(80vh);
-    opacity: 0;
-  }
+.banner .kotak-kata h2 {
+  color: #fff;
+  font-size: 2em;
 }
 
-.anim img:nth-child(1){
-  animation-delay: 1s;
+.banner .kotak-kata p {
+  color: #fff;
+  font-size: 1em;
+  margin: 5px 0 25px;
 }
-.anim img:nth-child(2){
-  animation-delay: 3.5s;
-}
-.anim img:nth-child(3){
-  animation-delay: 4s;
-}
-.anim img:nth-child(4){
-  animation-delay: 3s;
-}
-.anim img:nth-child(5){
-  animation-delay: 5s;
-}
-.anim img:nth-child(6){
-  animation-delay: 2.5s;
+
+.banner .kotak-kata a {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 50px;
+  }
+
+  .banner .kotak-kata a:hover {
+    background: #7FFFD4;
+    transition: .3s ease;
+  }
+
+  .banner .kotak-video {
+    position: relative;
+    background: #fff;
+    margin-left: 40px;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+  }
+
+  .banner .kotak-video video {
+    opacity: 1;
+  }
+
+  .banner .socialmed {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner .socialmed li {
+    list-style: none;
+  }
+
+  .banner .socialmed li a {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  @media (max-width: 991px) {
+    header {
+      padding: 20px 50px;
+    }
+    .banner {
+      padding: 150px 50px 0;
+      flex-direction: column;
+    }
+    .banner::before {
+      display: none;
+    }
+    .banner .kotak-kata {
+      max-width: 100%;
+    }
+    .banner .kotak-kata h2 {
+      font-size: 2.5em;
+    }
+    .banner .kotak-video {
+      width: 100%;
+      height: 200px;
+      margin: 40px 0 100px;
+    }
+    .banner .socialmed {
+      left: 50px;
+    }
 }
