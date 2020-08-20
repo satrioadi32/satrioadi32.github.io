@@ -100,8 +100,11 @@ header .toggle img {
   margin: 5px 0 25px;
 }
 
-p .penulis {
-    font-weight: bold;
+.banner .kotak-kata p .penulis{
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px 0 25px;
 }
 
 .banner .kotak-kata a {
