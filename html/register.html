@@ -10,7 +10,7 @@
   <center>
   <div class="box">Register Form
     <hr>
-  <form class="" action="produk.html" method="post">
+  <form action="produk.html" method="post" onsubmit="register">
 	<div class="container">
       <i class="fa fa-envelope"></i>
       <input class="input" type="text" name="email" placeholder="Email">
@@ -36,7 +36,7 @@
 			var password = document.getElementById("pass").value;
 			var nohp = document.getElementById("nohp").value;
 
-			if (akun !="" && password !="" nohp !="") {
+			if (akun !="" && password !="" && nohp !="") {
 				return true;
 			}
 
