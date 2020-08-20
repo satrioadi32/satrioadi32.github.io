@@ -1,7 +1,19 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../img/bg.png);
+  background-position: center;
+  background-size: cover;
+  font-size: 16px;
+  color: #292929;
+  line-height: 1.7em;
+  font-weight: 400;
 }
 
 nav {
@@ -56,8 +68,8 @@ nav ul li a {
 }
 
 nav ul li.active a {
-  background: #fff;
-  color: black;
+  background:#fff;
+  color: #000;
 }
 
 nav.black ul li a {
@@ -68,4 +80,78 @@ nav.black ul li a {
 nav ul li.active a, nav ul li a:hover {
   color: #000;
   background: #fff;
+}
+
+.produk {
+  width: 300px;
+  float: left;
+  margin: 130px 10px 0 23px;
+  margin-bottom: 20px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.produk img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+.harga {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 30px;
+  border-radius: 50px;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+
+  ul li a {
+    display: none;
+  }
+  .produk {
+    width: 90%;
+  }
+  img {
+    max-width: 100%;
+  }
+  h2 p {
+    font-size: 10px;
+  }
 }

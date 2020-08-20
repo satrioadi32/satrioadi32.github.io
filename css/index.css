@@ -77,11 +77,21 @@ header .toggle img {
   position: relative;
   max-width: 550px;
   z-index: 2;
+  letter-spacing: 0.1em;
 }
 
 .banner .kotak-kata h2 {
   color: #fff;
   font-size: 2em;
+  font-weight: 450;
+  font-style: italic;
+}
+
+.banner .kotak-kata span {
+  color: #DC143C;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .banner .kotak-kata p {
@@ -153,8 +163,8 @@ header .toggle img {
     .banner .kotak-kata {
       max-width: 100%;
     }
-    .banner .kotak-kata h2 {
-      font-size: 2.5em;
+    .banner .kotak-kata h2 span {
+      font-size: 1em;
     }
     .banner .kotak-video {
       width: 100%;
