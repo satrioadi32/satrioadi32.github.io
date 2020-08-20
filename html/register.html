@@ -13,17 +13,17 @@
   <form class="" action="produk.html" method="post">
 	<div class="container">
       <i class="fa fa-envelope"></i>
-      <input class="input" type="text" placeholder="Email">
+      <input class="input" type="text" name="email" placeholder="Email">
   </div>
 
   <div class="container">
       <i class="fa fa-key"></i>
-      <input class="input" type="password" placeholder="Password">
+      <input class="input" type="password" name="pass" placeholder="Password">
   </div>
 
   <div class="container">
       <i class="fa fa-envelope"></i>
-      <input class="input" type="text" placeholder="No HP">
+      <input class="input" type="text" name="nohp "placeholder="No HP">
   </div>
 
   <button type="submit" class="btn">Register</button>
@@ -32,11 +32,11 @@
 </body>
 	<script type="text/javascript">
 		function register() {
-			var akun = document.getElementById("Masukkan Akun Anda").value;
-			var password = document.getElementById("Password").value;
-			var nohp = document.getElementById("No HP").value;
+			var akun = document.getElementById("email").value;
+			var password = document.getElementById("pass").value;
+			var nohp = document.getElementById("nohp").value;
 
-			if (akun !=" " && password !=" " nohp !=" ") {
+			if (akun !="" && password !="" nohp !="") {
 				return true;
 			}
 
