@@ -279,13 +279,13 @@ nav ul li.active a, nav ul li a:hover {
   }
 
   .produk img {
-    width: 180px;
+    width: 150px;
     top: 35%;
     transform: translateY(-15%);
   }
 
   .produk:hover img {
-    width: 170px;
+    width: 130px;
   }
 
   .content {
