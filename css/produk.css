@@ -7,11 +7,11 @@
 }
 
 body {
-  background: url(../img/bg.png);
+  background-color: #333333;
   background-position: center;
   background-size: cover;
   font-size: 16px;
-  color: #292929;
+  color: #333333;
   line-height: 1.7em;
   font-weight: 400;
 }
@@ -27,8 +27,8 @@ nav {
   transition: .4s;
 }
 
-nav.black{
-  background: rgba(0, 0, 0, 0.8);
+nav .white{
+  background: rgba(255, 0, 0, 0.8);
   height: 80px;
   padding: 10px;
 }
@@ -42,8 +42,8 @@ nav .logo img {
   transition: .4s;
 }
 
-nav.black .logo img {
-  height: 60px;
+nav .white .logo img {
+  height: #000;
 }
 
 nav ul {
@@ -72,8 +72,8 @@ nav ul li.active a {
   color: #000;
 }
 
-nav.black ul li a {
-  color: #fff;
+nav.white ul li a {
+  color: #000;
   line-height: 60px;
 }
 
@@ -83,57 +83,177 @@ nav ul li.active a, nav ul li a:hover {
 }
 
 .produk {
+  font-family: 'Poppins',sans-serif;
+  position: relative;
   width: 300px;
+  height: 400px;
   float: left;
   margin: 130px 10px 0 23px;
   margin-bottom: 20px;
-  border: 5px solid #fff;
+  border: 1px solid #404149;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #404149;
+  overflow: hidden;
+}
+
+.produk::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fd6c9e;
+  clip-path: circle(150px at 20% 80%);
+  transition: .5s ease-in-out;
+}
+
+.produk:hover::before {
+  clip-path: circle(180px at 85% 20%);
+}
+
+.produk::after {
+  content: 'Nike';
+  position: absolute;
+  top: 10%;
+  left: -20%;
+  font-size: 9.5em;
+  font-weight: 1000;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .produk img {
+  position: absolute;
   width: 100%;
+  height: auto;
+  top: 35%;
+  transform: translateY(-10%);
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.produk:hover img {
+  top: 0;
+  transform: translateY(0%);
+  transform: rotate(25deg);
+  width: 280px;
   height: auto;
 }
 
-h2 {
-  font-size: 1.5em;
-  font-family: 'Teko', sans-serif;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 20px;
+.content {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  height: 100px;
   text-align: center;
-  align-items: center;
+  transition: 1s;
+  z-index: 10;
 }
 
-p {
-  text-align: center;
-  color: #fff;
-  font-size: 1.5em;
-  letter-spacing: 1px;
+.produk:hover .content {
+  height: 200px;
 }
 
-.btn {
+.produk .content h2 {
+  position: relative;
+  font-weight: 600;
+  color: #fff;
+}
+
+.produk .content .size,
+.produk .content .warna{
   display: flex;
   justify-content: center;
-  letter-spacing: 1px;
+  align-items: center;
+  padding: 8px 20px;
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.harga {
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0 30px;
-  border-radius: 50px;
+.produk:hover .content .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .6s;
 }
 
-.btn a {
+.produk:hover .content .warna {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .6s;
+}
+
+.produk .content .size h3,
+.produk .content .warna h3 {
   color: #fff;
-  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 8px;
+}
+
+.produk .content .size span {
+  width: 26px;
+  height: auto;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #000;
+  background: #fff;
+  margin: 0 5px;
+}
+
+.produk .content .size span:hover {
+  background: #fd6c9e;
+}
+
+.produk .content .warna span {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
   cursor: pointer;
+}
+
+.produk .content .warna span:nth-child(2){
+  background: #2ecc71;
+}
+
+.produk .content .warna span:nth-child(3){
+  background: #fff;
+}
+
+.produk .content .warna span:nth-child(4){
+  background: #fd6c9e;
+}
+
+.produk .content a {
+  display: inline-block;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  opacity: 0;
+  transition: .5s;
+}
+
+.produk:hover .content a {
+  opacity: 1;
+  transition-delay: .75s;
+}
+
+.produk:hover .content a:hover {
+  border: 1px solid #2ecc71;
+  background-color: #2ecc71;
+  transition: .3s;
+  color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -145,13 +265,70 @@ p {
   ul li a {
     display: none;
   }
+
   .produk {
-    width: 90%;
+    width: 40%;
+    height: 280px;
+    margin-bottom: 10px;
   }
-  img {
+
+  .produk::after {
+    font-size: 6em;
+    top: 20px;
+    left: -25px;
+  }
+
+  .produk img {
+    width: 180px;
+    top: 35%;
+    transform: translateY(-15%);
+  }
+
+  .produk:hover img {
+    width: 170px;
+  }
+
+  .content {
     max-width: 100%;
   }
-  h2 p {
-    font-size: 10px;
+
+  .produk:hover .content {
+    height: 180px;
   }
+
+  .produk .content h2 {
+    font-size: 20px;
+  }
+
+  .produk .content .size,
+  .produk .content .warna {
+    padding: 4px 10px;
+  }
+
+  .produk .content .size h3,
+  .produk .content .warna h3 {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-right: 4px;
+  }
+
+  .produk .content .size span {
+    width: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    margin: 0 3px;
+  }
+
+  .produk .content .warna span {
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+  }
+
+  .produk .content a {
+    font-size: 12px;
+    padding: 3px 5px;
+    margin-bottom: 0;
+  }
+
 }
