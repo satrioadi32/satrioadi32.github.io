@@ -116,7 +116,7 @@ nav ul li.active a, nav ul li a:hover {
   content: 'Nike';
   position: absolute;
   top: 10%;
-  left: -20%;
+  left: -10%;
   font-size: 9.5em;
   font-weight: 1000;
   font-style: italic;
@@ -267,7 +267,7 @@ nav ul li.active a, nav ul li a:hover {
   }
 
   .produk {
-    width: 40%;
+    width: 50%;
     height: 280px;
     margin-bottom: 10px;
   }
