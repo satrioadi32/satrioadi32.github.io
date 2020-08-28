@@ -273,7 +273,7 @@ nav ul li.active a, nav ul li a:hover {
   }
 
   .produk::after {
-    font-size: 6em;
+    font-size: 5em;
     top: 20px;
     left: -25px;
   }
